@@ -44,9 +44,6 @@ public class Main {
 	
 	
 	
-	
-	
-
 	public static void searchCustomers() {
 		
 		int choice =0;
@@ -200,6 +197,37 @@ public static void viewAllProducts() {
 	} catch (BusinessException e) {
 		log.info(e.getMessage());
 	}
+	int choice = 0;
+	do {
+		log.info("*******************************************");
+		log.info("1)Add any product to Cart");
+		log.info("2)Previous Menu");
+
+		try {
+			choice = Integer.parseInt(scanner.nextLine());
+			switch (choice) {
+			case 1:
+				log.info("Enter Product Id to add it to cart-->");
+				int productId = Integer.parseInt(scanner.nextLine());
+				int customerId = customer.getCustomerId();
+
+				if (cartService.addProductCart(productId, customerId) == 1)
+					log.info("Product " + productId + " added successfully to cart!!!\n");
+				break;
+			case 2:
+				log.info("***Going to Previous Menu***");
+				break;
+			default:
+				log.warn("Please enter valid choice (1-2)\n");
+			}
+		} catch (NumberFormatException e) {
+			log.info("Entry is not appropriate. Please Enter Valid Choice\n");
+		} catch (BusinessException e) {
+			log.info(e.getMessage());
+		}
+	} while (choice != 2);
+	
+	
 }
 
 
@@ -324,7 +352,7 @@ public static void customerSignup() {
 	
 }
 
-public static void employeesPortal() {
+public static void employeeLogin() {
 	int emp = 0;
 	do {
 
@@ -369,10 +397,11 @@ public static void employeesPortal() {
 						searchCustomers();
 						break;
 					case 5:
-						//markOrder(1, "Shipped");
+						markOrder(1, "Shipped");
 						break;
 					case 6:
 						log.info("Logout Successfully");
+						emp = 5;
 						break;
 					default:
 						log.warn("Please enter valid choice (1-5)\n");
@@ -389,6 +418,32 @@ public static void employeesPortal() {
 	} while (emp < 5);
 }
 
+public static void employeesPortal() {
+	int choice = 0;
+	do {
+		log.info("**********************************");
+		log.info("\n**** Welcome to Employee Login Portal****");
+		log.info("1) login");
+		log.info("2) Go to main menu");
+		try {
+			choice = Integer.parseInt(scanner.nextLine());
+			switch (choice) {
+			case 1:
+				employeeLogin();
+				break;
+			case 2:
+				log.info("*****Going to main menu******");
+				break;
+			default:
+				log.warn("Please enter valid choice (1-2)\n");
+			}
+
+		} catch (NumberFormatException e) {
+			log.info("Entry is not appropriate. Please Enter Valid Choice\n");
+			continue;
+		}
+	} while (choice != 2);
+}
 
 public static void customersPortal() {
 	
@@ -528,6 +583,86 @@ public static void customersPortal() {
 	} while (choice != 3);
 }
 
+public static void viewOrderForCustomer() {
+
+	List<Order> orderList;
+	try {
+		orderList = orderService.getOrderList(customer.getCustomerId());
+		log.info("There are " + orderList.size() + " Orders and details are below --> \n");
+		for (Order order : orderList)
+			log.info(order);
+	} catch (BusinessException e) {
+		log.info(e.getMessage());
+	}
+
+}
+
+public static void customerOrderMark() {
+
+	List<Order> orderList;
+	try {
+		orderList = orderService.markGetOrderList(customer.getCustomerId());
+		log.info("There are " + orderList.size() + " Orders and details are below --> \n");
+		for (Order order : orderList)
+			log.info(order);
+	} catch (BusinessException e) {
+		log.info(e.getMessage());
+	}
+
+}
+
+
+public static void employeeOrderMark() {
+
+	List<Order> orderList;
+	try {
+		orderList = orderService.getOrderList();
+		log.info("There are " + orderList.size() + " Orders and details are below --> \n");
+		for (Order order : orderList)
+			log.info(order);
+	} catch (BusinessException e) {
+		log.info(e.getMessage());
+	}
+
+}
+
+
+public static void markOrder(int id, String status) {
+	int choice = 0;
+	do {
+		if (id == 1) {
+			employeeOrderMark();
+		}
+		if (id == 2) {
+			customerOrderMark();
+		}
+		log.info("********************************");
+		log.info("1)Mark Status");
+		log.info("2)Go to previous menu");
+		try {
+			choice = Integer.parseInt(scanner.nextLine());
+
+			switch (choice) {
+			case 1:
+				log.info("Enter Order id to mark status");
+				int orderId = Integer.parseInt(scanner.nextLine());
+
+				if (orderService.updateOrderStatus(orderId, status) == 1)
+					log.info("Mark Status is Successfully Done!!");
+				break;
+			case 2:
+				log.info(" ****** going to previous menu *****");
+				break;
+			default:
+				log.warn("Please enter valid choice (1-2)\n");
+			}
+		} catch (NumberFormatException e) {
+			log.info("Entry is not appropriate. Please Enter Valid Choice\n");
+		} catch (BusinessException e) {
+			log.info(e.getMessage());
+		}
+	} while (choice != 2);
+}
 
 public static void main(String[] args) {		
 	
@@ -535,8 +670,8 @@ public static void main(String[] args) {
 	log.info("********************************");
 	int choice = 0;
 	do {
-		log.info("1) Enter Employee Details");
-		log.info("2) Enter Customer Details");
+		log.info("1) Enter as Employee");
+		log.info("2) Enter as Customer ");
 		log.info("3) Exit ");
 
 		log.info("Enter your choice between 1-3");
@@ -549,6 +684,7 @@ public static void main(String[] args) {
 		switch (choice) {
 		case 1:
 			employeesPortal();
+			System.exit(1);
 			break;
 		case 2:
 			customersPortal();

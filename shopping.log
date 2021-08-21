@@ -2945,3 +2945,270 @@ Total Price is 33990.0
 [main] 2021-08-20 12:36:33 INFO  com.app.Main  - 4)View Cart
 [main] 2021-08-20 12:36:33 INFO  com.app.Main  - 5)LogOut
 [main] 2021-08-20 12:36:33 INFO  com.app.Main  - Enter your choice
+[main] 2021-08-20 14:26:38 INFO  com.app.Main  - Welcome To Amozon Online Shopping App
+[main] 2021-08-20 14:26:38 INFO  com.app.Main  - ********************************
+[main] 2021-08-20 14:26:38 INFO  com.app.Main  - 1) Enter Employee Details
+[main] 2021-08-20 14:26:38 INFO  com.app.Main  - 2) Enter Customer Details
+[main] 2021-08-20 14:26:38 INFO  com.app.Main  - 3) Exit 
+[main] 2021-08-20 14:26:38 INFO  com.app.Main  - Enter your choice between 1-3
+[main] 2021-08-20 14:27:52 INFO  com.app.Main  - Welcome To Amozon Online Shopping App
+[main] 2021-08-20 14:27:52 INFO  com.app.Main  - ********************************
+[main] 2021-08-20 14:27:52 INFO  com.app.Main  - 1) Enter as Employee
+[main] 2021-08-20 14:27:52 INFO  com.app.Main  - 2) Enter as Customer 
+[main] 2021-08-20 14:27:52 INFO  com.app.Main  - 3) Exit 
+[main] 2021-08-20 14:27:52 INFO  com.app.Main  - Enter your choice between 1-3
+[main] 2021-08-20 14:28:08 INFO  com.app.Main  - 
+   Welcome to Employee Login 
+[main] 2021-08-20 14:28:08 INFO  com.app.Main  - Enter your username
+[main] 2021-08-20 14:28:57 INFO  com.app.Main  - Enter your password
+[main] 2021-08-20 14:29:06 INFO  com.app.Main  - Credentials is not matched with our Database!
+[main] 2021-08-20 14:29:06 INFO  com.app.Main  - 
+Remain chance to try login again is 4
+
+[main] 2021-08-20 14:29:06 INFO  com.app.Main  - 
+   Welcome to Employee Login 
+[main] 2021-08-20 14:29:06 INFO  com.app.Main  - Enter your username
+[main] 2021-08-20 14:31:05 INFO  com.app.Main  - Enter your password
+[main] 2021-08-20 14:31:09 INFO  com.app.Main  - Login Successfully!!!!!!!
+[main] 2021-08-20 14:31:09 INFO  com.app.Main  - Welcome saikiran,What you wanna do today?
+
+[main] 2021-08-20 14:31:09 INFO  com.app.Main  - 1)add Products
+[main] 2021-08-20 14:31:09 INFO  com.app.Main  - 2)View Products
+[main] 2021-08-20 14:31:09 INFO  com.app.Main  - 3)Search Products By filter
+[main] 2021-08-20 14:31:09 INFO  com.app.Main  - 4)Search Customer By filter
+[main] 2021-08-20 14:31:09 INFO  com.app.Main  - 5)Mark the Status of Order
+[main] 2021-08-20 14:31:09 INFO  com.app.Main  - 6)LogOut
+[main] 2021-08-20 14:31:09 INFO  com.app.Main  - Enter your valid choice between 1-6
+[main] 2021-08-20 14:38:18 INFO  com.app.Main  - Logout Successfully
+[main] 2021-08-20 14:38:18 INFO  com.app.Main  - 
+   Welcome to Employee Login 
+[main] 2021-08-20 14:38:18 INFO  com.app.Main  - Enter your username
+[main] 2021-08-20 14:38:43 INFO  com.app.Main  - Welcome To Amozon Online Shopping App
+[main] 2021-08-20 14:38:43 INFO  com.app.Main  - ********************************
+[main] 2021-08-20 14:38:43 INFO  com.app.Main  - 1) Enter as Employee
+[main] 2021-08-20 14:38:43 INFO  com.app.Main  - 2) Enter as Customer 
+[main] 2021-08-20 14:38:43 INFO  com.app.Main  - 3) Exit 
+[main] 2021-08-20 14:38:43 INFO  com.app.Main  - Enter your choice between 1-3
+[main] 2021-08-20 14:39:37 INFO  com.app.Main  - 
+   Welcome to Employee Login 
+[main] 2021-08-20 14:39:37 INFO  com.app.Main  - Enter your username
+[main] 2021-08-20 14:39:41 INFO  com.app.Main  - Enter your password
+[main] 2021-08-20 14:39:50 INFO  com.app.Main  - Login Successfully!!!!!!!
+[main] 2021-08-20 14:39:50 INFO  com.app.Main  - Welcome saikiran,What you wanna do today?
+
+[main] 2021-08-20 14:39:50 INFO  com.app.Main  - 1)add Products
+[main] 2021-08-20 14:39:50 INFO  com.app.Main  - 2)View Products
+[main] 2021-08-20 14:39:50 INFO  com.app.Main  - 3)Search Products By filter
+[main] 2021-08-20 14:39:50 INFO  com.app.Main  - 4)Search Customer By filter
+[main] 2021-08-20 14:39:50 INFO  com.app.Main  - 5)Mark the Status of Order
+[main] 2021-08-20 14:39:50 INFO  com.app.Main  - 6)LogOut
+[main] 2021-08-20 14:39:50 INFO  com.app.Main  - Enter your valid choice between 1-6
+[main] 2021-08-20 14:39:55 INFO  com.app.Main  - Logout Successfully
+[main] 2021-08-20 14:39:55 INFO  com.app.Main  - 
+   Welcome to Employee Login 
+[main] 2021-08-20 14:39:55 INFO  com.app.Main  - Enter your username
+[main] 2021-08-20 15:06:05 INFO  com.app.Main  - Welcome To Amozon Online Shopping App
+[main] 2021-08-20 15:06:05 INFO  com.app.Main  - ********************************
+[main] 2021-08-20 15:06:05 INFO  com.app.Main  - 1) Enter as Employee
+[main] 2021-08-20 15:06:05 INFO  com.app.Main  - 2) Enter as Customer 
+[main] 2021-08-20 15:06:05 INFO  com.app.Main  - 3) Exit 
+[main] 2021-08-20 15:06:05 INFO  com.app.Main  - Enter your choice between 1-3
+[main] 2021-08-20 15:07:51 INFO  com.app.Main  - 
+   Welcome to Employee Login 
+[main] 2021-08-20 15:07:51 INFO  com.app.Main  - Enter your username
+[main] 2021-08-20 15:07:55 INFO  com.app.Main  - Enter your password
+[main] 2021-08-20 15:08:02 INFO  com.app.Main  - Credentials is not matched with our Database!
+[main] 2021-08-20 15:08:02 INFO  com.app.Main  - 
+Remain chance to try login again is 4
+
+[main] 2021-08-20 15:08:02 INFO  com.app.Main  - 
+   Welcome to Employee Login 
+[main] 2021-08-20 15:08:02 INFO  com.app.Main  - Enter your username
+[main] 2021-08-20 15:08:18 INFO  com.app.Main  - Enter your password
+[main] 2021-08-20 15:08:26 INFO  com.app.Main  - Login Successfully!!!!!!!
+[main] 2021-08-20 15:08:26 INFO  com.app.Main  - Welcome saikiran,What you wanna do today?
+
+[main] 2021-08-20 15:08:26 INFO  com.app.Main  - 1)add Products
+[main] 2021-08-20 15:08:26 INFO  com.app.Main  - 2)View Products
+[main] 2021-08-20 15:08:26 INFO  com.app.Main  - 3)Search Products By filter
+[main] 2021-08-20 15:08:26 INFO  com.app.Main  - 4)Search Customer By filter
+[main] 2021-08-20 15:08:26 INFO  com.app.Main  - 5)Mark the Status of Order
+[main] 2021-08-20 15:08:26 INFO  com.app.Main  - 6)LogOut
+[main] 2021-08-20 15:08:26 INFO  com.app.Main  - Enter your valid choice between 1-6
+[main] 2021-08-20 15:30:20 INFO  com.app.Main  - Welcome To Amozon Online Shopping App
+[main] 2021-08-20 15:30:20 INFO  com.app.Main  - ********************************
+[main] 2021-08-20 15:30:20 INFO  com.app.Main  - 1) Enter as Employee
+[main] 2021-08-20 15:30:20 INFO  com.app.Main  - 2) Enter as Customer 
+[main] 2021-08-20 15:30:20 INFO  com.app.Main  - 3) Exit 
+[main] 2021-08-20 15:30:20 INFO  com.app.Main  - Enter your choice between 1-3
+[main] 2021-08-20 15:30:48 INFO  com.app.Main  - Entry is not appropriate. Please Enter Valid Choice
+
+[main] 2021-08-20 15:30:48 INFO  com.app.Main  - 1) Enter as Employee
+[main] 2021-08-20 15:30:48 INFO  com.app.Main  - 2) Enter as Customer 
+[main] 2021-08-20 15:30:48 INFO  com.app.Main  - 3) Exit 
+[main] 2021-08-20 15:30:48 INFO  com.app.Main  - Enter your choice between 1-3
+[main] 2021-08-20 15:30:53 INFO  com.app.Main  - 
+   Welcome to Employee Login 
+[main] 2021-08-20 15:30:53 INFO  com.app.Main  - Enter your username
+[main] 2021-08-20 15:31:01 INFO  com.app.Main  - Enter your password
+[main] 2021-08-20 15:31:09 INFO  com.app.Main  - Credentials is not matched with our Database!
+[main] 2021-08-20 15:31:09 INFO  com.app.Main  - 
+Remain chance to try login again is 4
+
+[main] 2021-08-20 15:31:09 INFO  com.app.Main  - 
+   Welcome to Employee Login 
+[main] 2021-08-20 15:31:09 INFO  com.app.Main  - Enter your username
+[main] 2021-08-20 15:31:34 INFO  com.app.Main  - Enter your password
+[main] 2021-08-20 15:31:38 INFO  com.app.Main  - Login Successfully!!!!!!!
+[main] 2021-08-20 15:31:38 INFO  com.app.Main  - Welcome saikiran,What you wanna do today?
+
+[main] 2021-08-20 15:31:38 INFO  com.app.Main  - 1)add Products
+[main] 2021-08-20 15:31:38 INFO  com.app.Main  - 2)View Products
+[main] 2021-08-20 15:31:38 INFO  com.app.Main  - 3)Search Products By filter
+[main] 2021-08-20 15:31:38 INFO  com.app.Main  - 4)Search Customer By filter
+[main] 2021-08-20 15:31:38 INFO  com.app.Main  - 5)Mark the Status of Order
+[main] 2021-08-20 15:31:38 INFO  com.app.Main  - 6)LogOut
+[main] 2021-08-20 15:31:38 INFO  com.app.Main  - Enter your valid choice between 1-6
+[main] 2021-08-20 15:31:51 INFO  com.app.Main  - Enter Product Name ::
+[main] 2021-08-20 15:31:56 INFO  com.app.Main  - Enter Product Price ::
+[main] 2021-08-20 15:32:02 INFO  com.app.Main  - Enter Product rating ::
+[main] 2021-08-20 15:32:06 INFO  com.app.Main  - Enter Product Category Id ::
+[main] 2021-08-20 15:32:10 INFO  com.app.Main  - Product add Successfully!!!!!!!!!!
+[main] 2021-08-20 15:32:10 INFO  com.app.Main  - 1)add Products
+[main] 2021-08-20 15:32:10 INFO  com.app.Main  - 2)View Products
+[main] 2021-08-20 15:32:10 INFO  com.app.Main  - 3)Search Products By filter
+[main] 2021-08-20 15:32:10 INFO  com.app.Main  - 4)Search Customer By filter
+[main] 2021-08-20 15:32:10 INFO  com.app.Main  - 5)Mark the Status of Order
+[main] 2021-08-20 15:32:10 INFO  com.app.Main  - 6)LogOut
+[main] 2021-08-20 15:32:10 INFO  com.app.Main  - Enter your valid choice between 1-6
+[main] 2021-08-20 15:32:19 INFO  com.app.Main  - Products Details are Below
+[main] 2021-08-20 15:32:19 INFO  com.app.Main  - Product [productId=1, productName=samsungtv, productPrice=13000.0, productRating=4.3, productCategoryId=100]
+[main] 2021-08-20 15:32:19 INFO  com.app.Main  - Product [productId=2, productName=smallsamsungtv, productPrice=10000.0, productRating=4.1, productCategoryId=101]
+[main] 2021-08-20 15:32:19 INFO  com.app.Main  - Product [productId=3, productName=sonytv, productPrice=10990.0, productRating=4.3, productCategoryId=102]
+[main] 2021-08-20 15:32:19 INFO  com.app.Main  - Product [productId=4, productName=realme3, productPrice=7000.0, productRating=3.2, productCategoryId=2]
+[main] 2021-08-20 15:32:19 INFO  com.app.Main  - Product [productId=5, productName=realme4, productPrice=8000.0, productRating=3.4, productCategoryId=1]
+[main] 2021-08-20 15:32:19 INFO  com.app.Main  - Product [productId=6, productName=realm5, productPrice=8500.0, productRating=3.3, productCategoryId=2]
+[main] 2021-08-20 15:32:19 INFO  com.app.Main  - Product [productId=7, productName=realme5, productPrice=8800.0, productRating=3.5, productCategoryId=2]
+[main] 2021-08-20 15:32:19 INFO  com.app.Main  - Product [productId=8, productName=realme6, productPrice=9000.0, productRating=4.0, productCategoryId=2]
+[main] 2021-08-20 15:32:19 INFO  com.app.Main  - Product [productId=9, productName=redmi3, productPrice=7500.0, productRating=3.4, productCategoryId=3]
+[main] 2021-08-20 15:32:19 INFO  com.app.Main  - Product [productId=10, productName=redmi4, productPrice=8800.0, productRating=3.8, productCategoryId=3]
+[main] 2021-08-20 15:32:19 INFO  com.app.Main  - Product [productId=11, productName=redmi5, productPrice=9000.0, productRating=4.1, productCategoryId=3]
+[main] 2021-08-20 15:32:19 INFO  com.app.Main  - Product [productId=12, productName=hp, productPrice=50000.0, productRating=3.8, productCategoryId=3]
+[main] 2021-08-20 15:32:19 INFO  com.app.Main  - Product [productId=13, productName=dell, productPrice=40000.0, productRating=3.5, productCategoryId=4]
+[main] 2021-08-20 15:32:19 INFO  com.app.Main  - Product [productId=14, productName=AC, productPrice=56000.0, productRating=4.2, productCategoryId=1]
+[main] 2021-08-20 15:32:19 INFO  com.app.Main  - Product [productId=15, productName=AC, productPrice=56000.0, productRating=4.2, productCategoryId=1]
+[main] 2021-08-20 15:32:19 INFO  com.app.Main  - Product [productId=16, productName=AC, productPrice=56000.0, productRating=4.2, productCategoryId=1]
+[main] 2021-08-20 15:32:19 INFO  com.app.Main  - Product [productId=17, productName=AC, productPrice=56000.0, productRating=4.2, productCategoryId=1]
+[main] 2021-08-20 15:32:19 INFO  com.app.Main  - Product [productId=18, productName=tv, productPrice=5000.0, productRating=3.8, productCategoryId=3]
+[main] 2021-08-20 15:32:19 INFO  com.app.Main  - 1)add Products
+[main] 2021-08-20 15:32:19 INFO  com.app.Main  - 2)View Products
+[main] 2021-08-20 15:32:19 INFO  com.app.Main  - 3)Search Products By filter
+[main] 2021-08-20 15:32:19 INFO  com.app.Main  - 4)Search Customer By filter
+[main] 2021-08-20 15:32:19 INFO  com.app.Main  - 5)Mark the Status of Order
+[main] 2021-08-20 15:32:19 INFO  com.app.Main  - 6)LogOut
+[main] 2021-08-20 15:32:19 INFO  com.app.Main  - Enter your valid choice between 1-6
+[main] 2021-08-20 15:32:30 INFO  com.app.Main  - Welcome to search a product)
+[main] 2021-08-20 15:32:30 INFO  com.app.Main  - 1)By  Product Name
+[main] 2021-08-20 15:32:30 INFO  com.app.Main  - 2)By Product Category
+[main] 2021-08-20 15:32:30 INFO  com.app.Main  - 3)Go to Previous Menu
+[main] 2021-08-20 15:32:30 INFO  com.app.Main  - Enter your choice-->
+[main] 2021-08-20 15:32:39 INFO  com.app.Main  - Enter Product Name 
+[main] 2021-08-20 15:32:49 INFO  com.app.Main  - Product [productId=7, productName=realme5, productPrice=8800.0, productRating=3.5, productCategoryId=2]
+[main] 2021-08-20 15:32:49 INFO  com.app.Main  - Welcome to search a product)
+[main] 2021-08-20 15:32:49 INFO  com.app.Main  - 1)By  Product Name
+[main] 2021-08-20 15:32:49 INFO  com.app.Main  - 2)By Product Category
+[main] 2021-08-20 15:32:49 INFO  com.app.Main  - 3)Go to Previous Menu
+[main] 2021-08-20 15:32:49 INFO  com.app.Main  - Enter your choice-->
+[main] 2021-08-20 15:33:03 INFO  com.app.Main  -  Going to Previous Menu 
+[main] 2021-08-20 15:33:03 INFO  com.app.Main  - 1)add Products
+[main] 2021-08-20 15:33:03 INFO  com.app.Main  - 2)View Products
+[main] 2021-08-20 15:33:03 INFO  com.app.Main  - 3)Search Products By filter
+[main] 2021-08-20 15:33:03 INFO  com.app.Main  - 4)Search Customer By filter
+[main] 2021-08-20 15:33:03 INFO  com.app.Main  - 5)Mark the Status of Order
+[main] 2021-08-20 15:33:03 INFO  com.app.Main  - 6)LogOut
+[main] 2021-08-20 15:33:03 INFO  com.app.Main  - Enter your valid choice between 1-6
+[main] 2021-08-20 15:33:09 INFO  com.app.Main  - 
+ Welcome to Search Customers 
+[main] 2021-08-20 15:33:09 INFO  com.app.Main  - 1)Search by Customer Id
+[main] 2021-08-20 15:33:09 INFO  com.app.Main  - 2)Search by Name
+[main] 2021-08-20 15:33:09 INFO  com.app.Main  - 3)Search by Email
+[main] 2021-08-20 15:33:09 INFO  com.app.Main  - 4)Previous Menu
+[main] 2021-08-20 15:33:09 INFO  com.app.Main  - Enter your choice-->
+[main] 2021-08-20 15:33:19 INFO  com.app.Main  - Enter Customer Id 
+[main] 2021-08-20 15:33:22 INFO  com.app.Main  - Customer [customerId=1, customerName=klddl, customerUsername=jkdkaa, customerEmail=jkslja@gmail.com]
+[main] 2021-08-20 15:33:22 INFO  com.app.Main  - 
+ Welcome to Search Customers 
+[main] 2021-08-20 15:33:22 INFO  com.app.Main  - 1)Search by Customer Id
+[main] 2021-08-20 15:33:22 INFO  com.app.Main  - 2)Search by Name
+[main] 2021-08-20 15:33:22 INFO  com.app.Main  - 3)Search by Email
+[main] 2021-08-20 15:33:22 INFO  com.app.Main  - 4)Previous Menu
+[main] 2021-08-20 15:33:22 INFO  com.app.Main  - Enter your choice-->
+[main] 2021-08-20 15:33:44 INFO  com.app.Main  - Enter Customer Name 
+[main] 2021-08-20 15:34:00 INFO  com.app.Main  - Customer [customerId=2, customerName=kkkk, customerUsername=kkkk, customerEmail=kkkkk]
+[main] 2021-08-20 15:34:00 INFO  com.app.Main  - 
+ Welcome to Search Customers 
+[main] 2021-08-20 15:34:00 INFO  com.app.Main  - 1)Search by Customer Id
+[main] 2021-08-20 15:34:00 INFO  com.app.Main  - 2)Search by Name
+[main] 2021-08-20 15:34:00 INFO  com.app.Main  - 3)Search by Email
+[main] 2021-08-20 15:34:00 INFO  com.app.Main  - 4)Previous Menu
+[main] 2021-08-20 15:34:00 INFO  com.app.Main  - Enter your choice-->
+[main] 2021-08-20 15:34:08 INFO  com.app.Main  - Enter Customer Email-Id 
+[main] 2021-08-20 15:34:28 INFO  com.app.Main  - Customer [customerId=8, customerName=kalyan, customerUsername=kalyan, customerEmail=kalyan@gmail.com]
+[main] 2021-08-20 15:34:28 INFO  com.app.Main  - 
+ Welcome to Search Customers 
+[main] 2021-08-20 15:34:28 INFO  com.app.Main  - 1)Search by Customer Id
+[main] 2021-08-20 15:34:28 INFO  com.app.Main  - 2)Search by Name
+[main] 2021-08-20 15:34:28 INFO  com.app.Main  - 3)Search by Email
+[main] 2021-08-20 15:34:28 INFO  com.app.Main  - 4)Previous Menu
+[main] 2021-08-20 15:34:28 INFO  com.app.Main  - Enter your choice-->
+[main] 2021-08-20 15:34:35 INFO  com.app.Main  -  Going to previous menu 
+[main] 2021-08-20 15:34:35 INFO  com.app.Main  - 1)add Products
+[main] 2021-08-20 15:34:35 INFO  com.app.Main  - 2)View Products
+[main] 2021-08-20 15:34:35 INFO  com.app.Main  - 3)Search Products By filter
+[main] 2021-08-20 15:34:35 INFO  com.app.Main  - 4)Search Customer By filter
+[main] 2021-08-20 15:34:35 INFO  com.app.Main  - 5)Mark the Status of Order
+[main] 2021-08-20 15:34:35 INFO  com.app.Main  - 6)LogOut
+[main] 2021-08-20 15:34:35 INFO  com.app.Main  - Enter your valid choice between 1-6
+[main] 2021-08-20 15:34:40 INFO  com.app.Main  - Logout Successfully
+[main] 2021-08-20 15:34:40 INFO  com.app.Main  - 
+   Welcome to Employee Login 
+[main] 2021-08-20 15:34:40 INFO  com.app.Main  - Enter your username
+[main] 2021-08-20 15:34:44 INFO  com.app.Main  - Welcome To Amozon Online Shopping App
+[main] 2021-08-20 15:34:44 INFO  com.app.Main  - ********************************
+[main] 2021-08-20 15:34:44 INFO  com.app.Main  - 1) Enter as Employee
+[main] 2021-08-20 15:34:44 INFO  com.app.Main  - 2) Enter as Customer 
+[main] 2021-08-20 15:34:44 INFO  com.app.Main  - 3) Exit 
+[main] 2021-08-20 15:34:44 INFO  com.app.Main  - Enter your choice between 1-3
+[main] 2021-08-20 15:34:48 INFO  com.app.Main  - 
+**** Welcome to Customer Portal****
+[main] 2021-08-20 15:34:48 INFO  com.app.Main  - 1)Login
+[main] 2021-08-20 15:34:48 INFO  com.app.Main  - 2)Create Accoount
+[main] 2021-08-20 15:34:48 INFO  com.app.Main  - 3)Back to Main Menu
+[main] 2021-08-20 15:34:48 INFO  com.app.Main  - Enter your choice between 1-3
+[main] 2021-08-20 15:34:53 INFO  com.app.Main  - 
+**** Welcome to Signup ****
+[main] 2021-08-20 15:34:53 INFO  com.app.Main  - Enter Name-->
+[main] 2021-08-20 15:35:24 WARN  com.app.Main  - Invalid name: s
+[main] 2021-08-20 15:35:24 INFO  com.app.Main  - Enter Username-->
+[main] 2021-08-20 15:35:40 INFO  com.app.Main  - Enter Email-Id-->
+[main] 2021-08-20 15:35:53 WARN  com.app.Main  - Invalid email : hshghdsgd
+[main] 2021-08-20 15:35:53 INFO  com.app.Main  - Enter Password-->
+[main] 2021-08-20 15:36:07 WARN  com.app.Main  - Invalid password: a
+[main] 2021-08-20 15:36:09 WARN  com.app.Main  - Column 'customerName' cannot be null
+[main] 2021-08-20 15:36:09 WARN  com.app.Main  - Internal Problem Occured. Contact sysAdmin!
+[main] 2021-08-20 15:36:09 INFO  com.app.Main  - 1)Login
+[main] 2021-08-20 15:36:09 INFO  com.app.Main  - 2)Create Accoount
+[main] 2021-08-20 15:36:09 INFO  com.app.Main  - 3)Back to Main Menu
+[main] 2021-08-20 15:36:09 INFO  com.app.Main  - Enter your choice between 1-3
+[main] 2021-08-20 15:36:09 INFO  com.app.Main  - Entry is not appropriate. Please Enter Valid Choice
+
+[main] 2021-08-20 15:36:09 INFO  com.app.Main  - 1)Login
+[main] 2021-08-20 15:36:09 INFO  com.app.Main  - 2)Create Accoount
+[main] 2021-08-20 15:36:09 INFO  com.app.Main  - 3)Back to Main Menu
+[main] 2021-08-20 15:36:09 INFO  com.app.Main  - Enter your choice between 1-3
+[main] 2021-08-20 15:37:46 INFO  com.app.Main  - Welcome To Amozon Online Shopping App
+[main] 2021-08-20 15:37:46 INFO  com.app.Main  - ********************************
+[main] 2021-08-20 15:37:46 INFO  com.app.Main  - 1) Enter as Employee
+[main] 2021-08-20 15:37:46 INFO  com.app.Main  - 2) Enter as Customer 
+[main] 2021-08-20 15:37:46 INFO  com.app.Main  - 3) Exit 
+[main] 2021-08-20 15:37:46 INFO  com.app.Main  - Enter your choice between 1-3

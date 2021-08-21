@@ -25,4 +25,24 @@ public class OrderServiceImpl implements OrderService {
 		return orderList;
 	}
 
+	@Override
+	public List<Order> markGetOrderList(int customerId) throws BusinessException {
+		List<Order> orderList = new ArrayList<>();
+		orderList = orderDAO.markGetOrderList(customerId);
+		return orderList;
+	}
+
+	@Override
+	public List<Order> getOrderList() throws BusinessException {
+		List<Order> orderList = new ArrayList<>();
+		orderList = orderDAO.getOrderList();
+		return orderList;
+	}
+
+	@Override
+	public int updateOrderStatus(int orderId, String status) throws BusinessException {
+		int c = orderDAO.updateOrderStatus(orderId,status);
+		return c;
+	}
+
 }
