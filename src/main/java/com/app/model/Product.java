@@ -62,13 +62,14 @@ public class Product {
 		this.productCategoryId = productCategoryId;
 	}
 
-	public Product(int productId, String productName, double productPrice, double productRating,
-			int productCategoryId) {
-		this(productName, productPrice, productRating, productCategoryId);
-
-		this.productId = productId;
-	}
+//	public Product(int productId, String productName, double productPrice, double productRating,
+//			int productCategoryId) {
+//		this(productName, productPrice, productRating, productCategoryId);
+//
+//		this.productId = productId;
+//	}
 	public Product() {
+		super();
 		
 	}
 

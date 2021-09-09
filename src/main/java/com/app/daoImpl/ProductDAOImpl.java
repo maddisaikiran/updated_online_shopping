@@ -24,7 +24,7 @@ public class ProductDAOImpl implements ProductDAO {
 	public int addProduct(Product product) throws BusinessException {
 		int c = 0;
 		try (Connection connection = MyDbConnection.getConnection()) {
-			String sql = "insert into product(productName,productPrice,productRating,productCategoryId) values(?,?,?,?)";
+			String sql = "insert into product(pro_name,pro_price,pro_rating,pro_cat_id) values(?,?,?,?)";
 			PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 			preparedStatement.setString(1, product.getProductName());
 			preparedStatement.setDouble(2, product.getProductPrice());
@@ -50,16 +50,16 @@ public class ProductDAOImpl implements ProductDAO {
 		List<Product> productList = new ArrayList<>();
 		
 		try (Connection connection = MyDbConnection.getConnection()) {
-			String sql = "select productId,productName,productPrice,productRating,productCategoryId from product";
+			String sql = "select pro_id,pro_name,pro_price,pro_rating,pro_cat_id from product";
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
 			ResultSet resultSet = preparedStatement.executeQuery();			
 			while(resultSet.next()) {
 				Product product = new Product();
-				product.setProductId(resultSet.getInt("productId"));
-				product.setProductName(resultSet.getString("productName"));
-				product.setProductCategoryId(resultSet.getInt("productCategoryId"));
-				product.setProductPrice(resultSet.getInt("productPrice"));
-				product.setProductRating(resultSet.getDouble("productRating"));
+				product.setProductId(resultSet.getInt("pro_id"));
+				product.setProductName(resultSet.getString("pro_name"));
+				product.setProductCategoryId(resultSet.getInt("pro_cat_id"));
+				product.setProductPrice(resultSet.getInt("pro_price"));
+				product.setProductRating(resultSet.getDouble("pro_rating"));
 				productList.add(product);
 			}
 			if(productList.size()<1) {
@@ -77,17 +77,17 @@ public class ProductDAOImpl implements ProductDAO {
 List<Product> productList = new ArrayList<>();
 		
 		try (Connection connection = MyDbConnection.getConnection()) {
-			String sql = "select productId,productName,productPrice,productRating,productCategoryId from product where productName=?";
+			String sql = "select pro_id,pro_name,pro_price,pro_rating,pro_cat_id from product where pro_name=?";
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setString(1, productName);
 			ResultSet resultSet = preparedStatement.executeQuery();			
 			while(resultSet.next()) {
 				Product product = new Product();
-				product.setProductId(resultSet.getInt("productId"));
-				product.setProductName(resultSet.getString("productName"));
-				product.setProductCategoryId(resultSet.getInt("productCategoryId"));
-				product.setProductPrice(resultSet.getInt("productPrice"));
-				product.setProductRating(resultSet.getDouble("productRating"));
+				product.setProductId(resultSet.getInt("pro_id"));
+				product.setProductName(resultSet.getString("pro_name"));
+				product.setProductCategoryId(resultSet.getInt("pro_cat_id"));
+				product.setProductPrice(resultSet.getInt("pro_price"));
+				product.setProductRating(resultSet.getDouble("pro_rating"));
 				productList.add(product);
 			}
 			if(productList.size()<1) {
@@ -104,17 +104,17 @@ List<Product> productList = new ArrayList<>();
          List<Product> productList = new ArrayList<>();
 		
 		try (Connection connection = MyDbConnection.getConnection()) {
-			String sql = "select productId,productName,productPrice,productRating,productCategoryId from product where productCategoryId =?";
+			String sql = "select pro_id,pro_name,pro_price,pro_rating,pro_cat_id from product where pro_cat_id =?";
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setString(1, productCategory);
 			ResultSet resultSet = preparedStatement.executeQuery();			
 			while(resultSet.next()) {
 				Product product = new Product();
-				product.setProductId(resultSet.getInt("productId"));
-				product.setProductName(resultSet.getString("productName"));
-				product.setProductCategoryId(resultSet.getInt("productCategoryId"));
-				product.setProductPrice(resultSet.getInt("productPrice"));
-				product.setProductRating(resultSet.getDouble("productRating"));
+				product.setProductId(resultSet.getInt("pro_id"));
+				product.setProductName(resultSet.getString("pro_name"));
+				product.setProductCategoryId(resultSet.getInt("pro_cat_id"));
+				product.setProductPrice(resultSet.getInt("pro_price"));
+				product.setProductRating(resultSet.getDouble("pro_rating"));
 				productList.add(product);
 			}
 			if(productList.size()<1) {

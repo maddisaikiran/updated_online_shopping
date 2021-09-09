@@ -46,7 +46,7 @@ public class Main {
 	
 	public static void searchCustomers() {
 		
-		int choice =0;
+		int choice = 0;
 		do {
 			log.info("\n Welcome to Search Customers ");
 			log.info("1)Search by Customer Id");
@@ -98,7 +98,7 @@ public class Main {
 			}
 			} catch (NumberFormatException e) {
 				log.info("Entry is not appropriate. Please Enter Valid Choice\n");
-				continue;
+				//continue;
 			} catch (BusinessException e) {
 				log.warn(e.getMessage());
 			}
@@ -107,7 +107,7 @@ public class Main {
 	
 	
 public static void searchProducts() {
-	int choice =0;
+	int choice = 0;
 	do {
 		log.info("Welcome to search a product)");
 		log.info("1)By  Product Name");
@@ -187,13 +187,13 @@ public static void addProducts() {
 public static void viewAllProducts() {
 	
 	log.info("Products Details are Below");											
-
+	List<Product> productList;
 	try {
-		List<Product> 	productList = productService.getAllProducts();
+		productList = productService.getAllProducts();
 		for (Product product : productList) {
 			log.info(product);
 		}
-	
+	     log.info("\n");
 	} catch (BusinessException e) {
 		log.info(e.getMessage());
 	}
@@ -263,7 +263,7 @@ public static void viewCart() {
 				double productPrice = cart.getPrice();
 				result = orderService.createOrder(customerId, productId, productPrice);
 			}
-			if(result ==1) {
+			if(result == 1) {
 				if(cartService.deleteProductCart(customer.getCustomerId())==1) {
 					log.info("Ordered Placed successfully.");
 				}
@@ -282,7 +282,7 @@ public static void viewCart() {
 			 log.info(e.getMessage());
 			 continue;
 		 }
-		}while(chance!=1 && chance!=2);
+		}while(chance != 1 && chance != 2);
 		
 		}
 		catch (BusinessException e) {
@@ -352,6 +352,21 @@ public static void customerSignup() {
 	
 }
 
+public static void viewProducts() {
+	log.info("Products Details are Below");											
+
+	try {
+		List<Product> 	productList = productService.getAllProducts();
+		for (Product product : productList) {
+			log.info(product);
+		}
+	
+	} catch (BusinessException e) {
+		log.info(e.getMessage());
+	}
+	
+}
+
 public static void employeeLogin() {
 	int emp = 0;
 	do {
@@ -374,21 +389,18 @@ public static void employeeLogin() {
 					log.info("2)View Products");
 					log.info("3)Search Products By filter");
 					log.info("4)Search Customer By filter");
-					log.info("5)Mark the Status of Order");
+					log.info("5)Mark the Status of Order Shipped!");
 					log.info("6)LogOut");
 					log.info("Enter your valid choice between 1-6");
 					try {
 						choice = Integer.parseInt(scanner.nextLine());
-					} catch (NumberFormatException e) {
-						log.info("Entry is not appropriate. Please Enter Valid Choice\n");
-						continue;
-					}
+					
 					switch (choice) {
 					case 1:
 						addProducts();
 						break;
 					case 2:
-						viewAllProducts();
+						viewProducts();
 						break;
 					case 3:
 						searchProducts();
@@ -407,7 +419,11 @@ public static void employeeLogin() {
 						log.warn("Please enter valid choice (1-5)\n");
 					}
 
-				} while (choice != 6);
+				} catch (NumberFormatException e) {
+					log.info("Entry is not appropriate. Please Enter Valid Choice\n");
+					continue;
+				}
+				}while (choice != 6);
 			}
 		} catch (BusinessException e) {
 			log.info(e.getMessage());
@@ -443,7 +459,81 @@ public static void employeesPortal() {
 			continue;
 		}
 	} while (choice != 2);
+	
 }
+
+public static void customerLogin() {
+	int choice = 0;
+	int custChance = 0;
+	do {
+		log.info("\n**** Welcome to Login Portal****");
+		log.info("Enter your username");
+		String username = scanner.nextLine();
+		log.info("Enter your password");
+		String password = scanner.nextLine();
+
+		try {
+			boolean valid = customerService.checkValidCredentials(username, password);
+			if (valid) {
+				
+				log.info(" Hurray Login Successfully");
+				log.info("Welcome " + username + ", What you wanna do today?");
+				
+				do {
+					log.info("1)View Products");
+					log.info("2)Search Products");
+					log.info("3)View Orders");
+					log.info("4)View Cart");
+					log.info("5)Mark order as received!");
+					log.info("6)LogOut");
+
+					log.info("Enter your choice");
+					try {
+						choice = Integer.parseInt(scanner.nextLine());
+					switch (choice) {
+					case 1:
+						viewAllProducts(); 
+						break;
+					case 2:
+						searchProducts();													
+						break;
+					case 3:
+						List<Order> orderList = orderService.getOrderList(customer.getCustomerId());
+						log.info("There are "+ orderList.size() +" Orders and details are below --> \n");
+						for (Order order : orderList) {
+							log.info(order);
+						}
+						break;
+					case 4:
+						viewCart();
+						break;
+					case 5:
+						markOrder(2, "Received");
+						break;
+					case 6:
+						log.info("Logout Successfully");
+						custChance = 5;
+					default:
+						log.warn("Please enter valid choice (1-5)\n");
+					}
+					}catch(BusinessException e) {
+						 log.info(e.getMessage());
+						 continue;
+					 }
+				} while (choice != 6);
+			}
+		} catch (BusinessException e) {
+			log.info(e.getMessage());
+			custChance++;
+			if (custChance > 0)
+				log.info("\nRemain chance to try login again is " + (5 - custChance) + "\n");
+
+		}
+	} while (custChance < 5);
+	
+}
+
+
 
 public static void customersPortal() {
 	
@@ -456,119 +546,11 @@ public static void customersPortal() {
 		log.info("Enter your choice between 1-3");
 		try {
 			choice = Integer.parseInt(scanner.nextLine());
-		} catch (NumberFormatException e) {
-			log.info("Entry is not appropriate. Please Enter Valid Choice\n");
-			continue;
-		}
+	
 		switch (choice) {
 		case 1:
-			
-			int custChance = 0;
-			do {
-				log.info("\n**** Welcome to Login Portal****");
-				log.info("Enter your username");
-				String username = scanner.nextLine();
-				log.info("Enter your password");
-				String password = scanner.nextLine();
+			customerLogin();
 
-				try {
-					boolean valid = customerService.checkValidCredentials(username, password);
-					if (valid) {
-						
-						log.info(" Hurray Login Successfully");
-						log.info("Welcome " + username + ", What you wanna do today?");
-						
-						do {
-							log.info("1)View Products");
-							log.info("2)Search Products");
-							log.info("3)View Orders");
-							log.info("4)View Cart");
-							log.info("5)LogOut");
-
-							log.info("Enter your choice");
-							try {
-								choice = Integer.parseInt(scanner.nextLine());
-							} catch (NumberFormatException e) {
-								log.info("Entry is not appropriate. Please Enter Valid Choice\n");
-								continue;
-							}
-							try {
-							switch (choice) {
-							case 1:
-								viewAllProducts();
-								do {
-								log.info("1)Add any product to Cart");
-								log.info("2)Going to Previous Menu");
-								try {
-									choice = Integer.parseInt(scanner.nextLine());
-								} catch (NumberFormatException e) {
-									log.info("Entry is not appropriate. Please Enter Valid Choice\n");
-									continue;
-								}
-
-								 switch(choice) {
-								 case 1: 
-									 log.info("Enter Product Id to add into Cart");
-									 int productId;
-									 try {
-										 productId = Integer.parseInt(scanner.nextLine());
-										} catch (NumberFormatException e) {
-											log.info("Entry is not appropriate. Please Enter Valid Product id\n");
-											continue;
-										}
-									 
-									 int customerId = customer.getCustomerId();
-									 try {
-										 if(cartService.addProductCart(productId,customerId)==1) 
-											 log.info("Product "+productId+" added successfully to cart\n");
-									 }catch(BusinessException e) {
-										 log.info(e.getMessage());
-										 continue;
-									 }
-									 
-									 break;
-								 case 2:
-									 log.info("***Going to Previous Menu***");
-									 break;
-								 default:
-									 log.warn("Please enter valid choice (1-2)\n");
-								 }
-								}while(choice!=2);
-								break;
-							case 2:
-								searchProducts();													
-								break;
-							case 3:
-								List<Order> orderList = orderService.getOrderList(customer.getCustomerId());
-								log.info("There are "+ orderList.size() +" Orders and details are below --> \n");
-								for (Order order : orderList) {
-									log.info(order);
-								}
-								break;
-							case 4:
-								viewCart();
-								break;
-
-							case 5:
-								log.info("Logout Successfully");
-								System.exit(1);
-							default:
-								log.warn("Please enter valid choice (1-5)\n");
-							}
-							}catch(BusinessException e) {
-								 log.info(e.getMessage());
-								 continue;
-							 }
-						} while (choice != 5);
-					}
-				} catch (BusinessException e) {
-					log.info(e.getMessage());
-					custChance++;
-					if (custChance > 0)
-						log.info("\nRemain chance to try login again is " + (5 - custChance) + "\n");
-
-				}
-			} while (custChance < 5);
 			break;
 		case 2:
 			customerSignup();
@@ -579,7 +561,10 @@ public static void customersPortal() {
 		default:
 			log.warn("Please enter valid choice (1-3)\n");
 		}
-
+		} catch (NumberFormatException e) {
+			log.info("Entry is not appropriate. Please Enter Valid Choice\n");
+			continue;
+		}
 	} while (choice != 3);
 }
 
@@ -614,7 +599,7 @@ public static void customerOrderMark() {
 
 public static void employeeOrderMark() {
 
-	List<Order> orderList;
+	List<Order> orderList;  
 	try {
 		orderList = orderService.getOrderList();
 		log.info("There are " + orderList.size() + " Orders and details are below --> \n");
@@ -668,7 +653,7 @@ public static void main(String[] args) {
 	
 	log.info("Welcome To Amozon Online Shopping App");
 	log.info("********************************");
-	int choice = 0;
+	int ch = 0;
 	do {
 		log.info("1) Enter as Employee");
 		log.info("2) Enter as Customer ");
@@ -676,15 +661,11 @@ public static void main(String[] args) {
 
 		log.info("Enter your choice between 1-3");
 		try {
-			choice = Integer.parseInt(scanner.nextLine());
-		} catch (NumberFormatException e) {
-			log.info("Entry is not appropriate. Please Enter Valid Choice\n");
-			continue;
-		}
-		switch (choice) {
+			ch = Integer.parseInt(scanner.nextLine());
+		
+		switch (ch) {
 		case 1:
 			employeesPortal();
-			System.exit(1);
 			break;
 		case 2:
 			customersPortal();
@@ -695,16 +676,9 @@ public static void main(String[] args) {
 		default:
 			log.warn("Please enter valid choice (1-3)\n");
 		}
-	} while (choice != 3);
-
+	} catch (NumberFormatException e) {
+		log.info("Entry is not appropriate. Please Enter Valid Choice\n");
+	}
+	} while (ch != 3);
 }
-
-
-public static Object checkChoice(int i) {
-	// TODO Auto-generated method stub
-	return null;
-}
-
-
-
 }

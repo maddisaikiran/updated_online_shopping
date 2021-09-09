@@ -1,13 +1,30 @@
 package com.app.model;
 
 public class Cart {
-	private int productId;
 	private int customerId;
+	private int productId;
 	private String productName;
-	private int price;
+	private double price;
 	public Cart() {
 		super();
-		// TODO Auto-generated constructor stub
+	
+	}
+	
+	
+	public Cart(int customerId, int productId, String productName, double price) {
+		super();
+		this.customerId = customerId;
+		this.productId = productId;
+		this.productName = productName;
+		this.price = price;
+	}
+
+
+	public int getCustomerId() {
+		return customerId;
+	}
+	public void setCustomerId(int customerId) {
+		this.customerId = customerId;
 	}
 	public int getProductId() {
 		return productId;
@@ -15,29 +32,16 @@ public class Cart {
 	public void setProductId(int productId) {
 		this.productId = productId;
 	}
-	public int getCustomerId() {
-		return customerId;
-	}
-	public void setCustomerId(int customerId) {
-		this.customerId = customerId;
-	}
 	public String getProductName() {
 		return productName;
 	}
 	public void setProductName(String productName) {
 		this.productName = productName;
 	}
-	public int getPrice() {
+	public double getPrice() {
 		return price;
 	}
-	public void setPrice(int price) {
-		this.price = price;
-	}
-	public Cart(int productId, int customerId, String productName, int price) {
-		super();
-		this.productId = productId;
-		this.customerId = customerId;
-		this.productName = productName;
+	public void setPrice(double price) {
 		this.price = price;
 	}
 	@Override
@@ -45,6 +49,7 @@ public class Cart {
 		return "Cart [productName=" + productName
 				+ ", price=" + price + "]";
 	}
+	
 
 	
 

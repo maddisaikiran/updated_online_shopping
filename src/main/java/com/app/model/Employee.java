@@ -6,6 +6,13 @@ public class Employee {
 	private String employeeUsername;
 	private String employeePassword;
 
+	
+	
+	public Employee() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public int getEmployeeId() {
 		return employeeId;
 	}

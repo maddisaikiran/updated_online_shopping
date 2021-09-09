@@ -24,7 +24,7 @@ public class CustomerDAOImp implements CustomerDAO{
 	public boolean checkValidCredentials(String username, String password) throws BusinessException {
 		 boolean login = false;
 		try (Connection connection = MyDbConnection.getConnection()) {
-			String sql = "select customerUsername,customerPassword from customer where customerUsername=? and customerPassword = ?";
+			String sql = "select cu_username,cu_password from customer where cu_username=? and cu_password = ?";
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setString(1, username);
 			preparedStatement.setString(2, password);
@@ -47,7 +47,7 @@ public class CustomerDAOImp implements CustomerDAO{
 		int c = 0;
 		try (Connection connection = MyDbConnection.getConnection()) {
 
-			String sql = "insert into customer(customerName,customerUsername,customerPassword,customerEmail) values(?,?,?,?)";
+			String sql = "insert into customer(cu_name,cu_username,cu_password,cu_email) values(?,?,?,?)";
 
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setString(1, customer.getCustomerName());
@@ -70,17 +70,17 @@ public class CustomerDAOImp implements CustomerDAO{
 	public Customer getCustomerByCustomerId(int customerId) throws BusinessException {
 		Customer customer = null;
 		try (Connection connection = MyDbConnection.getConnection()) {
-			String sql = "select customerId,customerName,customerUsername,customerEmail from customer where customerId=?";
+			String sql = "select cu_id,cu_name,cu_username,cu_email from customer where cu_id=?";
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setInt(1, customerId);
 	
 			ResultSet resultSet = preparedStatement.executeQuery();
 			if (resultSet.next()) {
 				customer = new Customer();
-				customer.setCustomerId(resultSet.getInt("customerId"));
-				customer.setCustomerName(resultSet.getString("customerName"));
-				customer.setCustomerUsername(resultSet.getString("customerUsername"));
-				customer.setCustomerEmail(resultSet.getString("customerEmail"));
+				customer.setCustomerId(resultSet.getInt("cu_id"));
+				customer.setCustomerName(resultSet.getString("cu_name"));
+				customer.setCustomerUsername(resultSet.getString("cu_username"));
+				customer.setCustomerEmail(resultSet.getString("cu_email"));
 			} else {
 				throw new BusinessException("Customer Id is not matched in our Database!");
 			}
@@ -96,7 +96,7 @@ public class CustomerDAOImp implements CustomerDAO{
 List<Customer> customerList = new ArrayList<>();
 		
 		try (Connection connection = MyDbConnection.getConnection()) {
-			String sql = "select customerId,customerName,customerUsername,customerEmail from customer where customerName=?";
+			String sql = "select cu_id,cu_name,cu_username,cu_email from customer where cu_name=?";
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setString(1, customerName);
 	
@@ -104,10 +104,10 @@ List<Customer> customerList = new ArrayList<>();
 			if (resultSet.next()) {
 				Customer customer = new Customer();
 				
-				customer.setCustomerId(resultSet.getInt("customerId"));
-				customer.setCustomerName(resultSet.getString("customerName"));
-				customer.setCustomerUsername(resultSet.getString("customerUsername"));
-				customer.setCustomerEmail(resultSet.getString("customerEmail"));
+				customer.setCustomerId(resultSet.getInt("cu_id"));
+				customer.setCustomerName(resultSet.getString("cu_name"));
+				customer.setCustomerUsername(resultSet.getString("cu_username"));
+				customer.setCustomerEmail(resultSet.getString("cu_email"));
 				
 				customerList.add(customer);
 			} else {
@@ -124,17 +124,17 @@ List<Customer> customerList = new ArrayList<>();
 	public Customer getCustomerByEmail(String customerEmail) throws BusinessException {
 		Customer customer = null;
 		try (Connection connection = MyDbConnection.getConnection()) {
-			String sql = "select customerId,customerName,customerUsername,customerEmail from customer where customerEmail=?";
+			String sql = "select cu_id,cu_name,cu_username,cu_email from customer where cu_email=?";
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setString(1, customerEmail);
 	
 			ResultSet resultSet = preparedStatement.executeQuery();
 			if (resultSet.next()) {
 				customer = new Customer();
-				customer.setCustomerId(resultSet.getInt("customerId"));
-				customer.setCustomerName(resultSet.getString("customerName"));
-				customer.setCustomerUsername(resultSet.getString("customerUsername"));
-				customer.setCustomerEmail(resultSet.getString("customerEmail"));
+				customer.setCustomerId(resultSet.getInt("cu_id"));
+				customer.setCustomerName(resultSet.getString("cu_name"));
+				customer.setCustomerUsername(resultSet.getString("cu_username"));
+				customer.setCustomerEmail(resultSet.getString("cu_email"));
 			} else {
 				throw new BusinessException("Customer Email-Id is not matched in our Database!");
 			}

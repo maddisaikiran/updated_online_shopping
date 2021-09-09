@@ -18,35 +18,20 @@ import com.app.model.Cart;
 public class CartDAOImpl implements CartDAO{
 
 	@Override
-	public int addProductCart(int productId, int customerId) throws BusinessException {
-		int c;
-		try (Connection connection = MyDbConnection.getConnection()) {
-			String sql = "insert into cart(customerId,productId) values (?,?)";
-			PreparedStatement preparedStatement = connection.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
-			preparedStatement.setInt(1,customerId);
-			preparedStatement.setInt(2,productId);
-			c = preparedStatement.executeUpdate();
-		} catch (ClassNotFoundException | SQLException e) {
-			throw new BusinessException(e.getMessage()+ " Internal Problem Occured. Contacts sysAdmin!");
-		}
-		return c;
-	}
-
-	@Override
 	public List<Cart> getProductCart(int customerId) throws BusinessException {
 		List<Cart> cartList = new ArrayList<>();
 		try (Connection connection = MyDbConnection.getConnection()) {
 		
-			String sql = "select customerId,c.productId,p.productName,p.productPrice from cart c join product p on c.productId=p.productId where c.customerId=?";
+			String sql = "select cu_id,pro_id,pro_name,pro_price from cart join product on ca_pr_id = pro_id join customer on ca_cu_id = cu_id where cu_id=?";
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setInt(1, customerId);
 			ResultSet resultSet = preparedStatement.executeQuery();			
 			while(resultSet.next()) {
 				Cart cart = new Cart();
 				cart.setCustomerId(customerId);
-				cart.setProductId(resultSet.getInt("productId"));
-				cart.setProductName(resultSet.getString("productName"));
-				cart.setPrice(resultSet.getInt("productPrice"));
+				cart.setProductId(resultSet.getInt("pro_id"));
+				cart.setProductName(resultSet.getString("pro_name"));
+				cart.setPrice(resultSet.getInt("pro_price"));
 				cartList.add(cart);
 			}
 			if(cartList.size()<1) {
@@ -62,11 +47,26 @@ public class CartDAOImpl implements CartDAO{
 	public int deleteProductCart(int customerId) throws BusinessException {
 		int c = 0;
 		try (Connection connection = MyDbConnection.getConnection()) {
-			String sql = "delete from cart where customerId=?";
+			String sql = "delete from cart where ca_cu_id=?";
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setInt(1,customerId);
 			c = preparedStatement.executeUpdate();
 			
+		} catch (ClassNotFoundException | SQLException e) {
+			throw new BusinessException(e.getMessage()+ " Internal Problem Occured. Contact sysAdmin!");
+		}
+		return c;
+	}
+
+	@Override
+	public int addProductCart(int productId, int customerId) throws BusinessException {
+		int c;
+		try (Connection connection = MyDbConnection.getConnection()) {
+			String sql = "insert into cart(ca_cu_id,ca_pr_id) values (?,?)";
+			PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+			preparedStatement.setInt(1,customerId);
+			preparedStatement.setInt(2,productId);
+			c = preparedStatement.executeUpdate();
 		} catch (ClassNotFoundException | SQLException e) {
 			throw new BusinessException(e.getMessage()+ " Internal Problem Occured. Contact sysAdmin!");
 		}

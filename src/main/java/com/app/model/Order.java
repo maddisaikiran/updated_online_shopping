@@ -3,7 +3,6 @@ package com.app.model;
 public class Order {
 	private int orderId;
 	private int productId;
-	//private int customerId;
 	private String productName;
 	private double price;
 	private String orderStatus;
@@ -12,6 +11,15 @@ public class Order {
 		// TODO Auto-generated constructor stub
 	}
 	
+	public Order(int orderId, int productId, String productName, double price, String orderStatus) {
+		super();
+		this.orderId = orderId;
+		this.productId = productId;
+		this.productName = productName;
+		this.price = price;
+		this.orderStatus = orderStatus;
+	}
+
 	public int getOrderId() {
 		return orderId;
 	}
@@ -28,13 +36,6 @@ public class Order {
 		this.productId = productId;
 	}
 
-//	public int getCustomerId() {
-//		return customerId;
-//	}
-//
-//	public void setCustomerId(int customerId) {
-//		this.customerId = customerId;
-//	}
 
 	public String getProductName() {
 		return productName;
@@ -62,7 +63,7 @@ public class Order {
 
 	@Override
 	public String toString() {
-		return "Order [orderId=" + orderId + ", productId=" + productId +
+		return "Order [orderId=" + orderId +
 				 ", productName=" + productName + ", price=" + price + ", orderStatus=" + orderStatus + "]";
 	}
 
